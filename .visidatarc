@@ -1,0 +1,2 @@
+def rabo2b(bedrag):
+    return bedrag.replace("+", "").replace(",", ".")

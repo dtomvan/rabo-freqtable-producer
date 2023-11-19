@@ -21,26 +21,29 @@ exist() {
 }
 
 if [ "$1" = "--usage" ] || [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
-    die "Usage: $0 <source> <replay> [output]"
+    die "Usage: $0 <source> <replay> [output] [kwargs...]"
 fi
 
 if [ $# -lt 2 ]; then
     die "Expected at least 2 arguments, got $#"
 fi
 
+config_file="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )/.visidatarc"
+
+exist "$config_file"
 exist "$1"
 exist "$2"
 
 file -b "$2" | grep '^a vd -p script' >/dev/null || die "$2 is not a visidata script"
-
-say "Performing $2 on $1..."
-set -x
 
 tmp="$(mktemp /tmp/XXXXXXXXX.vdj)"
 source_file="$1"
 sheet_name="$(basename $source_file)"
 sheet_name="${sheet_name%.*}"
 replay_file="$2"
+
+say "Performing $2 on $1..."
+set -x
 
 cleanup() {
     set +x
@@ -59,5 +62,5 @@ if [ "${VISIDATA_BATCH:-0}" = "1" ]; then
 fi
 
 echo "$@"
-vd -p "$tmp" "${kwargs[@]}" -o "${3:--}" "$source_file" "${@:4}" || cleanup
+vd --config="$config_file" -p "$tmp" "${kwargs[@]}" -o "${3:--}" "$source_file" "${@:4}" || cleanup
 rm "$tmp"
