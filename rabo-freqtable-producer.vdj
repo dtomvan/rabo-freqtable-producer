@@ -1,47 +1,48 @@
 #!vd -p
-
-{"longname": "open-file", "input": "__FILENAME__", "keystrokes": "o"}
-{"sheet": "__SHEET__", "col": "IBAN/BBAN", "row": "", "longname": "hide-col", "input": "", "keystrokes": "-", "comment": "Hide current column"}
-{"sheet": "__SHEET__", "col": "Munt", "row": "", "longname": "hide-col", "input": "", "keystrokes": "-", "comment": "Hide current column"}
-{"sheet": "__SHEET__", "col": "BIC", "row": "", "longname": "hide-col", "input": "", "keystrokes": "-", "comment": "Hide current column"}
-{"sheet": "__SHEET__", "col": "Volgnr", "row": "", "longname": "type-int", "input": "", "keystrokes": "#", "comment": "set type of current column to int"}
-{"sheet": "__SHEET__", "col": "Datum", "row": "", "longname": "type-date", "input": "", "keystrokes": "@", "comment": "set type of current column to date"}
-{"sheet": "__SHEET__", "col": "Rentedatum", "row": "", "longname": "hide-col", "input": "", "keystrokes": "-", "comment": "Hide current column"}
-{"sheet": "__SHEET__", "col": "Bedrag", "row": "", "longname": "addcol-expr", "input": "rabo2b(Bedrag)", "keystrokes": "=", "comment": "create new column from Python expression, with column names as variables"}
-{"sheet": "__SHEET__", "col": "Bedrag", "row": "", "longname": "hide-col", "input": "", "keystrokes": "-", "comment": "Hide current column"}
-{"sheet": "__SHEET__", "col": "Volgnr", "row": "", "longname": "rename-col", "input": "id", "keystrokes": "^", "comment": "rename current column"}
-{"sheet": "__SHEET__", "col": "Datum", "row": "", "longname": "rename-col", "input": "date", "keystrokes": "^", "comment": "rename current column"}
-{"sheet": "__SHEET__", "col": "rabo2b(Bedrag)", "row": "", "longname": "rename-col", "input": "amount", "keystrokes": "^", "comment": "rename current column"}
-{"sheet": "__SHEET__", "col": "amount", "row": "", "longname": "type-float", "input": "", "keystrokes": "%", "comment": "set type of current column to float"}
-{"sheet": "__SHEET__", "col": "Saldo na trn", "row": "", "longname": "rename-col", "input": "a", "keystrokes": "^", "comment": "rename current column"}
-{"sheet": "__SHEET__", "col": "a", "row": "", "longname": "addcol-expr", "input": "rabo2b(a)", "keystrokes": "=", "comment": "create new column from Python expression, with column names as variables"}
-{"sheet": "__SHEET__", "col": "a", "row": "", "longname": "hide-col", "input": "", "keystrokes": "-", "comment": "Hide current column"}
-{"sheet": "__SHEET__", "col": "rabo2b(a)", "row": "", "longname": "rename-col", "input": "balance", "keystrokes": "^", "comment": "rename current column"}
-{"sheet": "__SHEET__", "col": "balance", "row": "", "longname": "type-float", "input": "", "keystrokes": "%", "comment": "set type of current column to float"}
-{"sheet": "__SHEET__", "col": "Tegenrekening IBAN/BBAN", "row": "", "longname": "rename-col", "input": "IBAN", "keystrokes": "^", "comment": "rename current column"}
-{"sheet": "__SHEET__", "col": "Naam tegenpartij", "row": "", "longname": "rename-col", "input": "name", "keystrokes": "^", "comment": "rename current column"}
-{"sheet": "__SHEET__", "col": "Naam uiteindelijke partij", "row": "", "longname": "hide-col", "input": "", "keystrokes": "-", "comment": "Hide current column"}
-{"sheet": "__SHEET__", "col": "Naam initi\udcebrende partij", "row": "", "longname": "hide-col", "input": "", "keystrokes": "-", "comment": "Hide current column"}
-{"sheet": "__SHEET__", "col": "BIC tegenpartij", "row": "", "longname": "hide-col", "input": "", "keystrokes": "-", "comment": "Hide current column"}
-{"sheet": "__SHEET__", "col": "Code", "row": "", "longname": "rename-col", "input": "type", "keystrokes": "^", "comment": "rename current column"}
-{"sheet": "__SHEET__", "col": "type", "row": "", "longname": "type-string", "input": "", "keystrokes": "~", "comment": "set type of current column to str"}
-{"sheet": "__SHEET__", "col": "name", "row": "", "longname": "type-string", "input": "", "keystrokes": "~", "comment": "set type of current column to str"}
-{"sheet": "__SHEET__", "col": "IBAN", "row": "", "longname": "type-string", "input": "", "keystrokes": "~", "comment": "set type of current column to str"}
-{"sheet": "__SHEET__", "col": "Batch ID", "row": "", "longname": "hide-col", "input": "", "keystrokes": "-", "comment": "Hide current column"}
-{"sheet": "__SHEET__", "col": "Transactiereferentie", "row": "", "longname": "hide-col", "input": "", "keystrokes": "-", "comment": "Hide current column"}
-{"sheet": "__SHEET__", "col": "Machtigingskenmerk", "row": "", "longname": "hide-col", "input": "", "keystrokes": "-", "comment": "Hide current column"}
-{"sheet": "__SHEET__", "col": "Incassant ID", "row": "", "longname": "hide-col", "input": "", "keystrokes": "-", "comment": "Hide current column"}
-{"sheet": "__SHEET__", "col": "Betalingskenmerk", "row": "", "longname": "hide-col", "input": "", "keystrokes": "-", "comment": "Hide current column"}
-{"sheet": "__SHEET__", "col": "Omschrijving-1", "row": "", "longname": "rename-col", "input": "desc", "keystrokes": "^", "comment": "rename current column"}
-{"sheet": "__SHEET__", "col": "Omschrijving-2", "row": "", "longname": "hide-col", "input": "", "keystrokes": "-", "comment": "Hide current column"}
-{"sheet": "__SHEET__", "col": "Omschrijving-3", "row": "", "longname": "hide-col", "input": "", "keystrokes": "-", "comment": "Hide current column"}
-{"sheet": "__SHEET__", "col": "Reden retour", "row": "", "longname": "hide-col", "input": "", "keystrokes": "-", "comment": "Hide current column"}
-{"sheet": "__SHEET__", "col": "Oorspr bedrag", "row": "", "longname": "hide-col", "input": "", "keystrokes": "-", "comment": "Hide current column"}
-{"sheet": "__SHEET__", "col": "Oorspr munt", "row": "", "longname": "hide-col", "input": "", "keystrokes": "-", "comment": "Hide current column"}
-{"sheet": "__SHEET__", "col": "Koers", "row": "", "longname": "hide-col", "input": "", "keystrokes": "-", "comment": "Hide current column"}
-{"sheet": "__SHEET__", "col": "", "row": "", "longname": "freeze-sheet", "input": "", "keystrokes": "g'", "comment": "open a frozen copy of current sheet with all visible columns evaluated"}
-{"sheet": "__SHEET__'", "col": "amount", "row": "", "longname": "key-col", "input": "", "keystrokes": "!", "comment": "toggle current column as a key column"}
-{"sheet": "__SHEET__'", "col": "amount", "row": "", "longname": "aggregate-col", "input": "sum", "keystrokes": "+", "comment": "Add aggregator to current column"}
-{"sheet": "__SHEET__'", "col": "amount", "row": "", "longname": "aggregate-col", "input": "avg", "keystrokes": "+", "comment": "Add aggregator to current column"}
-{"sheet": "__SHEET__'", "col": "amount", "row": "", "longname": "aggregate-col", "input": "q4", "keystrokes": "+", "comment": "Add aggregator to current column"}
-{"sheet": "__SHEET__'", "col": "name", "row": "", "longname": "freq-col", "input": "", "keystrokes": "Shift+F", "comment": "open Frequency Table grouped on current column, with aggregations of other columns"}
+{"longname": "open-file", "input": "__FILENAME__"}
+{"sheet": "__SHEET__", "col": "IBAN/BBAN", "longname": "hide-col"}
+{"sheet": "__SHEET__", "col": "Munt", "longname": "hide-col"}
+{"sheet": "__SHEET__", "col": "BIC", "longname": "hide-col"}
+{"sheet": "__SHEET__", "col": "Volgnr", "longname": "type-int"}
+{"sheet": "__SHEET__", "col": "Datum", "longname": "type-date"}
+{"sheet": "__SHEET__", "col": "Rentedatum", "longname": "hide-col"}
+{"sheet": "__SHEET__", "col": "Bedrag", "longname": "addcol-expr", "input": "rabo2b(Bedrag)"}
+{"sheet": "__SHEET__", "col": "Bedrag", "longname": "hide-col"}
+{"sheet": "__SHEET__", "col": "Volgnr", "longname": "rename-col", "input": "id"}
+{"sheet": "__SHEET__", "col": "Datum", "longname": "rename-col", "input": "date"}
+{"sheet": "__SHEET__", "col": "rabo2b(Bedrag)", "longname": "rename-col", "input": "amount"}
+{"sheet": "__SHEET__", "col": "amount", "longname": "type-float"}
+{"sheet": "__SHEET__", "col": "Saldo na trn", "longname": "rename-col", "input": "a"}
+{"sheet": "__SHEET__", "col": "a", "longname": "addcol-expr", "input": "rabo2b(a)"}
+{"sheet": "__SHEET__", "col": "a", "longname": "hide-col"}
+{"sheet": "__SHEET__", "col": "rabo2b(a)", "longname": "rename-col", "input": "balance"}
+{"sheet": "__SHEET__", "col": "balance", "longname": "type-float"}
+{"sheet": "__SHEET__", "col": "Tegenrekening IBAN/BBAN", "longname": "rename-col", "input": "IBAN"}
+{"sheet": "__SHEET__", "col": "Naam tegenpartij", "longname": "rename-col", "input": "name"}
+{"sheet": "__SHEET__", "col": "Naam uiteindelijke partij", "longname": "hide-col"}
+{"sheet": "__SHEET__", "col": "Naam initi\udcebrende partij", "longname": "hide-col"}
+{"sheet": "__SHEET__", "col": "BIC tegenpartij", "longname": "hide-col"}
+{"sheet": "__SHEET__", "col": "Code", "longname": "rename-col", "input": "type"}
+{"sheet": "__SHEET__", "col": "type", "longname": "addcol-expr", "input": "rabotypedesc(type)"}
+{"sheet": "__SHEET__", "col": "rabotypedesc(type)", "longname": "rename-col", "input": "type_desc"}
+{"sheet": "__SHEET__", "col": "type", "longname": "type-string"}
+{"sheet": "__SHEET__", "col": "name", "longname": "type-string"}
+{"sheet": "__SHEET__", "col": "IBAN", "longname": "type-string"}
+{"sheet": "__SHEET__", "col": "Batch ID", "longname": "hide-col"}
+{"sheet": "__SHEET__", "col": "Transactiereferentie", "longname": "hide-col"}
+{"sheet": "__SHEET__", "col": "Machtigingskenmerk", "longname": "hide-col"}
+{"sheet": "__SHEET__", "col": "Incassant ID", "longname": "hide-col"}
+{"sheet": "__SHEET__", "col": "Betalingskenmerk", "longname": "hide-col"}
+{"sheet": "__SHEET__", "col": "Omschrijving-1", "longname": "rename-col", "input": "desc"}
+{"sheet": "__SHEET__", "col": "Omschrijving-2", "longname": "hide-col"}
+{"sheet": "__SHEET__", "col": "Omschrijving-3", "longname": "hide-col"}
+{"sheet": "__SHEET__", "col": "Reden retour", "longname": "hide-col"}
+{"sheet": "__SHEET__", "col": "Oorspr bedrag", "longname": "hide-col"}
+{"sheet": "__SHEET__", "col": "Oorspr munt", "longname": "hide-col"}
+{"sheet": "__SHEET__", "col": "Koers", "longname": "hide-col"}
+{"sheet": "__SHEET__", "col": "", "longname": "freeze-sheet"}
+{"sheet": "__SHEET__'", "col": "amount", "longname": "key-col"}
+{"sheet": "__SHEET__'", "col": "amount", "longname": "aggregate-col", "input": "sum"}
+{"sheet": "__SHEET__'", "col": "amount", "longname": "aggregate-col", "input": "avg"}
+{"sheet": "__SHEET__'", "col": "amount", "longname": "aggregate-col", "input": "q4"}
+{"sheet": "__SHEET__'", "col": "name", "longname": "freq-col"}

@@ -1,2 +1,26 @@
 def rabo2b(bedrag):
     return bedrag.replace("+", "").replace(",", ".")
+
+def rabotypedesc(code):
+    dic = {
+        "ac": "Acceptgiro",
+        "ba": "Betaalautomaat",
+        "bc": "Betalen contactloos",
+        "bg": "Bankgiro opdracht",
+        "bv": "Betaalverzoek",
+        "cb": "Crediteurenbetaling",
+        "db": "Diverse boekingen",
+        "eb": "Bedrijven Euro-incasso",
+        "ei": "Euro-incasso",
+        "fb": "Finbox",
+        "ga": "Geldautomaat Euro",
+        "gb": "Geldautomaat VV",
+        "id": "iDEAL",
+        "kh": "Kasafhandeling",
+        "ma": "Machtiging",
+        "sb": "Salarisbetaling",
+        "sp": "Spoedbetaling",
+        "tb": "Eigen rekening",
+        "wb": "Wereldbetaling",
+    }
+    return dic[code] or code
